@@ -5,4 +5,5 @@
 struct personalInfo ;                // personal information
 typedef struct personalInfo info;
 int BufferSize(char *Buffer);
+void TemplateA(char* data,const char* fileName);
 #endif

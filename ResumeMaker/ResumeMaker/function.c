@@ -31,6 +31,7 @@ int BufferSize(char *Buffer) // this function returns the number of characters o
 		else
 		{
 				 /* fopen returns 0, the NULL pointer, on failure */
+			printf("file not found");
 			exit(EXIT_FAILURE);
 		}
 		 
