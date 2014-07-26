@@ -61,10 +61,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="function.c" />
+    <ClCompile Include="Html.c" />
     <ClCompile Include="main.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="function.h" />
+    <ClInclude Include="Html.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
