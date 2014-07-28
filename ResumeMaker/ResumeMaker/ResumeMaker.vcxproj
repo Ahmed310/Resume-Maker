@@ -68,6 +68,9 @@
     <ClInclude Include="function.h" />
     <ClInclude Include="Html.h" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\Debug\info.txt" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -1,23 +1,25 @@
 #info
-:name<Muhammad Ahmed>
-:phone<0324-4691236>
+:name<Muhammad Ahmed Malik>
+:phone<0324-4691XXX>
 :email<m.ahmed310@hotmail.com>
 :adress<451 Ammar block nishter colony ferozepur road LHR>
 
 #summary<Personal Summary>
-:<I am an enthusiastic and self motivated individual with a passion for technology. I easily adapt to new situations and have a talent for problem solving and learning new skills.>
+:{I am an enthusiastic and self motivated individual with a passion for technology. 
+I easily adapt to new situations and have a talent for problem solving and learning new skills.}
 
 #education <Education>
-:!Electrical Engineering! University of Engineering LHR 2010-2014
+:{^University of Engineering and Technology LHR^ BS Electrical Engineering 2010-2014}
+:{^Government College Township LHR^ FSc pre Engineering 2008-2010(A+)}
+:{^Cathredal school system # 4^ Matricluation science 2006-2008(A+)}
 
-#experience <Work Experience>
-: !Company Name! internship july 2013 - august 2013
+#jobs <Work Experience>
+:{^Company Name^ internship july 2013 - august 2013}
 
-#skills <Key Skills>
-:<Electrical Engineering>
-:<Microsoft Office>
-:<Programming>
-:<MicroControllers>
-:<Game Development>
-
+#experties <Key Skills>
+:{Electrical Engineering}
+:{Microsoft Office}
+:{Programming}
+:{MicroControllers}
+:{Game Development}
 #end              // end of file

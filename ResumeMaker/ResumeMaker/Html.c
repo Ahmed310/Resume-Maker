@@ -49,3 +49,11 @@ void newLine(FILE* file)
 {
 	fprintf(file,"<br>");
 }
+
+void boldText(FILE* file, char* txt)
+{
+	fputs("<b>",file);
+	fputs(txt,file);
+	fputs("</b>",file);
+}
+
