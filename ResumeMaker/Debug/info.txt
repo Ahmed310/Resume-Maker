@@ -1,25 +1,31 @@
-#info
+# info
 :name<Muhammad Ahmed Malik>
 :phone<0324-4691XXX>
 :email<m.ahmed310@hotmail.com>
 :adress<451 Ammar block nishter colony ferozepur road LHR>
 
-#summary<Personal Summary>
+# [Personal Summary]
 :{I am an enthusiastic and self motivated individual with a passion for technology. 
 I easily adapt to new situations and have a talent for problem solving and learning new skills.}
 
-#education <Education>
+# [Education]
 :{^University of Engineering and Technology LHR^ BS Electrical Engineering 2010-2014}
 :{^Government College Township LHR^ FSc pre Engineering 2008-2010(A+)}
 :{^Cathredal school system # 4^ Matricluation science 2006-2008(A+)}
 
-#jobs <Work Experience>
+# [Work Experience]
 :{^Company Name^ internship july 2013 - august 2013}
 
-#experties <Key Skills>
+# [Final Year Project]
+:{^Unmaned Ground Vehicle^ Feaatures included tele-operation, Autonomous mode, human detection,
+ Sign board detection and recognition, live video stream, image database, voice operation, 
+measuring distance from camera to sign board  }
+
+# [Key Skills]
 :{Electrical Engineering}
 :{Microsoft Office}
 :{Programming}
 :{MicroControllers}
 :{Game Development}
-#end              // end of file
+
+#~              // end of file

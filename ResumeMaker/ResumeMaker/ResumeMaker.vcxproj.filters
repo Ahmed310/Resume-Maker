@@ -35,5 +35,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="..\Debug\info.txt" />
+    <None Include="Readme.txt" />
   </ItemGroup>
 </Project>

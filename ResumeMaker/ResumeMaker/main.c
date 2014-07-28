@@ -1,5 +1,5 @@
 //
-//				This program read info from text file and convert this into Html file
+//				This program read data from text file and convert this into Html file
 //
 //              Author : Muhammad Ahmed
 
@@ -23,7 +23,7 @@ int main(int argc, char*argv[])
 	}
 	
 	buffSize = BufferSize(argv[1]);
-	mainBuffer = (char*)malloc(sizeof(char) * BufferSize("info.txt"));
+	mainBuffer = (char*)malloc(sizeof(char) * BufferSize("info.txt"));				// allocate memory 
 	CopyFileToArray(argv[1],mainBuffer);
 
 	TemplateA(mainBuffer,"myCv.html");

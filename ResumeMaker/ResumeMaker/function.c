@@ -44,35 +44,8 @@ int BufferSize(char *Buffer) // this function returns the number of characters o
 
 }
 //------------------------------------------------------------------------------------------
-void TemplateA(char* data,const char* fileName)
+static void putInfo(FILE* file, Info pInfo)			// only use in this file
 {
-	FILE *file;
-	Info pInfo;
-	file = fopen(fileName,"w");
-	if(file == NULL)
-	{
-		perror("file not found @ TemplateA");
-		exit(EXIT_FAILURE);
-	}
-	getInfo(data,&pInfo);
-	
-	if(file != NULL)
-	{
-		fprintf(file,"<html> \n \t <body>\n \t \t<center>");            // start html, body or center tags
-
-		fprintf(file,"\n<table border=\"1\" width=\"800\" cellpadding = \"0\" cellspacing = \"0\">  ");         // table start tag
-
-		fprintf(file,"\n<tr>");											// insert row
-		fprintf(file,"\n<td width = \"500\" align = \"center\" >");		// insert data start tag
-
-		
-		insertHeading(file,pInfo.name,1);
-		
-
-		fprintf(file,"\n</td>");										// insert data end tag
-
-		fprintf(file,"\n<td width = \"300\" align = \"left\" >");		// insert data start tag
-		
 		fprintf(file,"P: ");
 		fprintf(file,pInfo.phone);
 		newLine(file);
@@ -84,6 +57,39 @@ void TemplateA(char* data,const char* fileName)
 		fprintf(file,"A: ");
 		fprintf(file,pInfo.adress);
 		
+}
+//------------------------------------------------------------------------------------------
+void TemplateA(char* data,const char* fileName)
+{
+	FILE *file;
+	Info pInfo;
+	file = fopen(fileName,"w");
+	if(file == NULL)
+	{
+		perror("file not found @ TemplateA");
+		exit(EXIT_FAILURE);
+	}
+	getInfo(data,&pInfo);							// featch info 
+	
+	if(file != NULL)
+	{
+		fprintf(file,"<html> \n \t <body>\n \t \t<center>");            // start html, body or center tags
+
+		fprintf(file,"\n<table border=\"1\" width=\"800\" cellpadding = \"0\" cellspacing = \"0\">  ");         // table start tag
+
+		fprintf(file,"\n<tr>");											// insert row
+		fprintf(file,"\n<td width = \"500\" align = \"center\" >");		// insert data start tag
+
+		
+		insertHeading(file,pInfo.name,1);								// insert name as Heading
+		
+
+		fprintf(file,"\n</td>");										// insert data end tag
+
+		fprintf(file,"\n<td width = \"300\" align = \"left\" >");		// insert data start tag
+		
+		putInfo(file,pInfo);
+
 		fprintf(file,"\n</td>");										// insert data end tag
 
 		fprintf(file,"\n</tr>");										// row end tag
@@ -92,13 +98,8 @@ void TemplateA(char* data,const char* fileName)
 		fprintf(file,"\n<tr>");
 		fprintf(file,"\n<td align = \"center\"  colspan = \"2\"  >");		                // insert data start tag
 
-		putSection(data,"summary",file);
-		putSection(data,"education",file);
-		putSection(data,"job",file);
-		putSection(data,"experties",file);
-		
-
-
+		putSections(data,file);
+	
 		fprintf(file,"\n</td>");										// insert data end tag
 		fprintf(file,"\n</tr>");										// row end tag
 		
@@ -121,7 +122,7 @@ void CopyFileToArray(const char* fileName, char* buffer)
 
 		if(file != NULL)
         {
-            while  ( (buffer[counter++] = fgetc( file ))  != EOF );   
+            while  ( (buffer[counter++] = fgetc( file ))  != '~' );   
             
 			fclose( file );                           
         }
@@ -174,57 +175,68 @@ static void CopyInfo(char* buffer, const char* token ,char* f)			// only used in
 }
 //------------------------------------------------------------------------------------------
 //------------------------------------------------------------------------------------------
- static void putSection (char* buffer, const char* name, FILE* file)
+ static void putSections (char* str,FILE* file)
 {
-	char* str;
 	char tmp;
-	char tmpBuf[64];
-	char ok = 0;
-	str = strstr(buffer,name);
-	tmp = *str++;
+	tmp = *str;
 
 	if(str != NULL)
 	{
-		CopyInfo(buffer,name,tmpBuf);
-		insertHeading(file,tmpBuf,1);
-
-		while((tmp = *str++) != '#')
+		while((tmp = *str++) != '~')                     // loop till end of file
 		{
-
-			if(tmp  == '{')
+			while((tmp = *str++) != '#')				 // loop till new section
 			{
-				while(1)
-				{
-					tmp = *str++;
-					if(tmp  == '}')
-					{
-						fputs("\n",file);
-						newLine(file);
-						break;
-					}
-					if(tmp  == '^')
-					{
-						fputs("<b>",file);
-						while(1)
-						{
-							tmp = *str++;
-							if(tmp == '^')
-							{
-								fputs("</b>",file);
-								newLine(file);
-								tmp = *str++;
-								break;
-							}
-							fputc(tmp,file);
-							//boldChar(file,tmp);
-						}
-					}
 
-					fputc(tmp,file);
+				if(tmp == '[')							 
+				{
+					insertLine(file,"100%%");
+					fputs("<h1>",file);
+					while(1)							  // print Heading of Section
+					{
+						tmp = *str++;
+						if(tmp == ']')
+						{
+							fputs("</h1>",file);
+							tmp = *str++;
+							break;
+						}
+						fputc(tmp,file);
+					}
+				}
+
+				if(tmp  == '{')								// loop and print decription of section
+				{
+					while(1)
+					{
+						tmp = *str++;
+						if(tmp  == '}')
+						{
+							fputs("\n",file);
+							newLine(file);
+							break;
+						}
+						if(tmp  == '^')						// check for bold text and insert it
+						{
+							fputs("<b>",file);
+							while(1)
+							{
+								tmp = *str++;
+								if(tmp == '^')
+								{
+									fputs("</b>",file);
+									newLine(file);
+									tmp = *str++;
+									break;
+								}
+								fputc(tmp,file);
+							}
+						}
+
+						fputc(tmp,file);
+					}
 				}
 			}
 		}
-
 		insertLine(file,"100%%");
 
 	}
