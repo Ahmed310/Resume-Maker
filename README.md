@@ -3,12 +3,12 @@ Resume-Maker
 
 This program is implemented in C langage. it generate Resume | CV in HTML formate.
 
->= How to use program =<
+> How to use program 
 ========================
 Open command prompt (terminal) , change current directory to where exe of program  resides.
 than type [application name.exe] [space] [text file.txt] e.g ResumeMaker.exe info.txt
 
->= Rules for writing Text input file =<
+> Rules for writing Text input file 
 =======================================
 1. At the end of file dont forget to write #~ ['~' is inserted by pressing shift+'~' key]
 2. Every Section is started by #. After # add one space otherwise output will be wrong.
@@ -22,7 +22,7 @@ than type [application name.exe] [space] [text file.txt] e.g ResumeMaker.exe inf
 
 Video Demo :
 ============
-http://www.mediafire.com/watch/y318wgi26376afi/Resume_Maker_Demo.avi
+http://www.dailymotion.com/video/x22bidh_resume-maker-implemented-in-c_videogames#
 
 Website : 
 =========
