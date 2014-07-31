@@ -46,17 +46,22 @@ int BufferSize(char *Buffer) // this function returns the number of characters o
 //------------------------------------------------------------------------------------------
 static void putInfo(FILE* file, Info pInfo)			// only use in this file
 {
-		fprintf(file,"P: ");
+		fprintf(file,"<p>");
+		fprintf(file,"Contact No.: ");
 		fprintf(file,pInfo.phone);
-		newLine(file);
+		fprintf(file,"</p>");
+//		newLine(file);
 
-		fprintf(file,"E: ");
+		fprintf(file,"<p>");
+		fprintf(file,"E-mail: ");
 		fprintf(file,pInfo.eMail);
-		newLine(file);
-
-		fprintf(file,"A: ");
-		fprintf(file,pInfo.adress);
+		fprintf(file,"</p>");
+//		newLine(file);
 		
+		fprintf(file,"<p>");
+		fprintf(file,"Address: ");
+		fprintf(file,pInfo.adress);
+		fprintf(file,"</p>");
 }
 //------------------------------------------------------------------------------------------
 void TemplateA(char* data,const char* fileName)
@@ -86,7 +91,7 @@ void TemplateA(char* data,const char* fileName)
 
 		fprintf(file,"\n</td>");										// insert data end tag
 
-		fprintf(file,"\n<td width = \"300\" align = \"left\" >");		// insert data start tag
+		fprintf(file,"\n<td width = \"300\" valign = \"top\"  rowspan = \"2\" bgcolor=#36A3FB>");		// insert data start tag
 		
 		putInfo(file,pInfo);
 
@@ -96,7 +101,7 @@ void TemplateA(char* data,const char* fileName)
 		
 		
 		fprintf(file,"\n<tr>");
-		fprintf(file,"\n<td align = \"center\"  colspan = \"2\"  >");		                // insert data start tag
+		fprintf(file,"\n<td align = \"left\"  >");		                // insert data start tag
 
 		putSections(data,file);
 	

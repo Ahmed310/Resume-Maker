@@ -13,8 +13,8 @@ than type [application name.exe] [space] [text file.txt] e.g ResumeMaker.exe inf
 1. At the end of file dont forget to write #~ ['~' is inserted by pressing shift+'~' key]
 2. Every Section is started by #. After # add one space otherwise output will be wrong.
 3. text enclose by [] are section Heading.
-4. text enslosed by {} are decription of section, : is optional.
-5. text ensloded by ^^ are inserted as bold in output file, text after this are inserted in new line.
+4. text enclosed by {} are decription of section, : is optional.
+5. text encloded by ^^ are inserted as bold in output file, text after this are inserted in new line.
 6. By following these rules you can add as many as section as you can.
 
 
