@@ -80,7 +80,7 @@ void TemplateA(char* data,const char* fileName)
 	{
 		fprintf(file,"<html> \n \t <body>\n \t \t<center>");            // start html, body or center tags
 
-		fprintf(file,"\n<table border=\"1\" width=\"800\" cellpadding = \"0\" cellspacing = \"0\">  ");         // table start tag
+		fprintf(file,"\n<table border=\"0\" width=\"800\" cellpadding = \"0\" cellspacing = \"0\">  ");         // table start tag
 
 		fprintf(file,"\n<tr>");											// insert row
 		fprintf(file,"\n<td width = \"500\" align = \"center\" >");		// insert data start tag

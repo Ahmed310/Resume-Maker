@@ -1,13 +1,9 @@
-﻿Build started 7/31/2014 2:31:29 PM.
-     1>Project "D:\programs\github\Resume-Maker\ResumeMaker\ResumeMaker\ResumeMaker.vcxproj" on node 2 (rebuild target(s)).
-     1>_PrepareForClean:
-         Deleting file "Debug\ResumeMaker.lastbuildstate".
-       InitializeBuildStatus:
+﻿Build started 8/5/2014 7:46:51 PM.
+     1>Project "D:\programs\github\Resume-Maker\ResumeMaker\ResumeMaker\ResumeMaker.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
          Creating "Debug\ResumeMaker.unsuccessfulbuild" because "AlwaysCreate" was specified.
        ClCompile:
-         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt function.c Html.c main.c
-         main.c
-         Html.c
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TC /analyze- /errorReport:prompt function.c
          function.c
      1>d:\programs\github\resume-maker\resumemaker\resumemaker\function.c(23): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
@@ -15,19 +11,19 @@
                  c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
      1>d:\programs\github\resume-maker\resumemaker\resumemaker\function.c(124): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
                  c:\program files\microsoft visual studio 10.0\vc\include\stdio.h(234) : see declaration of 'fopen'
-         Generating Code...
        Link:
          C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\programs\github\Resume-Maker\ResumeMaker\Debug\ResumeMaker.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\ResumeMaker.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"D:\programs\github\Resume-Maker\ResumeMaker\Debug\ResumeMaker.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\programs\github\Resume-Maker\ResumeMaker\Debug\ResumeMaker.lib" /MACHINE:X86 Debug\function.obj
          Debug\Html.obj
          Debug\main.obj
+         LINK : D:\programs\github\Resume-Maker\ResumeMaker\Debug\ResumeMaker.exe not found or not built by the last incremental link; performing full link
          ResumeMaker.vcxproj -> D:\programs\github\Resume-Maker\ResumeMaker\Debug\ResumeMaker.exe
        Manifest:
          C:\Program Files\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"D:\programs\github\Resume-Maker\ResumeMaker\Debug\ResumeMaker.exe;#1" /manifest Debug\ResumeMaker.exe.intermediate.manifest
        FinalizeBuildStatus:
          Deleting file "Debug\ResumeMaker.unsuccessfulbuild".
          Touching "Debug\ResumeMaker.lastbuildstate".
-     1>Done Building Project "D:\programs\github\Resume-Maker\ResumeMaker\ResumeMaker\ResumeMaker.vcxproj" (rebuild target(s)).
+     1>Done Building Project "D:\programs\github\Resume-Maker\ResumeMaker\ResumeMaker\ResumeMaker.vcxproj" (build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.68
+Time Elapsed 00:00:04.40
