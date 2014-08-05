@@ -17,6 +17,10 @@ than type [application name.exe] [space] [text file.txt] e.g ResumeMaker.exe inf
 5. text encloded by ^^ are inserted as bold in output file, text after this are inserted in new line.
 6. By following these rules you can add as many as section as you can.
 
+Output:
+=======
+![Screenshot](https://raw.githubusercontent.com/Ahmed310/Resume-Maker/master/ResumeMaker/screenshot.png)
+
 
 *NOTE : currently only one Template is supported. In feature add more Templates.
 
