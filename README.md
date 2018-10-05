@@ -1,7 +1,7 @@
 Resume-Maker
 ============
 
-This program is implemented in C langage. it generate Resume | CV in HTML formate.
+This program is implemented in C langage. it generate Resume | CV in HTML format.
 
 > How to use program 
 ========================
